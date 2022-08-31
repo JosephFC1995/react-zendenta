@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashboard--cards {
+	@apply flex flex-wrap gap-6;
+	.card-chart {
+		flex: 0 0 60%;
+		padding: 0 -15px;
+        flex: 0.6 1 0;
+	}
+
+	.card-info {
+		flex: 0.4 1 0;
+	}
+}
