@@ -3,5 +3,5 @@
 // @ts-nocheck
 export {}
 declare global {
-  const IconFeBar: typeof import('~icons/fe/bar.jsx')['default']
+  const IconFeBar: typeof import('~icons/fe/bar.jsx')['default'],
 }
