@@ -10,8 +10,10 @@ declare global {
   const IconGgMathPlus: typeof import('~icons/gg/math-plus.jsx')['default']
   const IconGgMenu: typeof import('~icons/gg/menu.jsx')['default']
   const IconGgNotifications: typeof import('~icons/gg/notifications.jsx')['default']
+  const IconGgPiano: typeof import('~icons/gg/piano.jsx')['default']
   const IconGgSearch: typeof import('~icons/gg/search.jsx')['default']
   const IconGgSelect: typeof import('~icons/gg/select.jsx')['default']
+  const IconGgSmartphone: typeof import('~icons/gg/smartphone.jsx')['default']
   const IconGgUser: typeof import('~icons/gg/user.jsx')['default']
   const IconGgWebsite: typeof import('~icons/gg/website.jsx')['default']
 }

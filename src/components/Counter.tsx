@@ -1,7 +1,7 @@
 import React, { useEffect, useState, FC } from "react";
 
 interface CounterProps {
-    name: string;
+	name: string;
 }
 
 // interface CounterState {
@@ -9,30 +9,34 @@ interface CounterProps {
 // }
 
 const Counter: FC<CounterProps> = ({ name }) => {
-    const [counter, setCount] = useState(0);
+	const [counter, setCount] = useState(0);
 
-    useEffect(() => {
-        console.log("Mounted ...")
-    })
+	useEffect(() => {
+		console.log("Mounted ...");
+	});
 
-    const increment = () => {
-        setCount((preCount) => {
-            return preCount + 1;
-        })
-    }
+	const increment = () => {
+		setCount((preCount) => {
+			return preCount + 1;
+		});
+	};
 
-    return (
-        <div className="flex h-screen">
-            <div className="m-auto">
-                <h1>{name}</h1>
-                <div className="text-6xl text-red-600">{counter}</div>
-                <button className="px-6 py-2 rounded bg-green-800 hover:bg-green-600 text-white" type="button" onClick={() => increment()}>
-                    count+
-                </button>
-            </div>
-        </div>
-    );
-}
+	return (
+		<div className="flex h-screen">
+			<div className="m-auto">
+				<h1>{name}</h1>
+				<div className="text-6xl text-red-600">{counter}</div>
+				<button
+					className="rounded bg-green-800 px-6 py-2 text-white hover:bg-green-600"
+					type="button"
+					onClick={() => increment()}
+				>
+					count+
+				</button>
+			</div>
+		</div>
+	);
+};
 
 export default Counter;
 
