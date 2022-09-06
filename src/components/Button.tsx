@@ -6,18 +6,19 @@ import tw from "tailwind-styled-components";
 
 type Color = "primary" | "white";
 
-
 interface ButtonStyledProps {
 	$hasIconGo: boolean;
 	$rounded: boolean;
 	$showPointer: boolean;
+	$border: boolean;
 }
 
 const ButtonStyled = tw.button<ButtonStyledProps>`
     btn
-    ${(p: ButtonStyledProps) => (p.$hasIconGo && "btn--append")}
-    ${(p: ButtonStyledProps) => (p.$rounded && "btn--rounded")}
-    ${(p: ButtonStyledProps) => (p.$showPointer && "btn--border btn--notification")}
+    ${(p: ButtonStyledProps) => p.$hasIconGo && "btn--append"}
+    ${(p: ButtonStyledProps) => p.$rounded && "btn--rounded"}
+    ${(p: ButtonStyledProps) => p.$showPointer && "btn--notification"}
+    ${(p: ButtonStyledProps) => p.$border && "btn--border"}
     `;
 
 interface ButtonProps {
@@ -54,6 +55,7 @@ const Button: FC<ButtonProps> = ({
 				className={classNames(colorClass, classes)}
 				$hasIconGo={hasIconGo}
 				$rounded={rounded}
+				$border={border}
 				$showPointer={showPointer}
 			>
 				{icon ? icon : null}
